@@ -1,2 +1,2 @@
 #!/bin/bash
-etcdctl get /coreos.com/network/config
+/opt/etcd/etcdctl get /coreos.com/network/config
