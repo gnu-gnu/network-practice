@@ -5,7 +5,7 @@ Wants=network-online.target
 
 [Service]
 Type=notify
-ExecStart=/opt/flannel/flannel -etcd-endpoints http://192.168.59.101:2379 -iface eth1
+ExecStart=/opt/flannel/flannel -etcd-endpoints http://192.168.59.101:2379 -iface eth1 -public-ip MY_IP
 RestartSec=5
 Restart=always
 
