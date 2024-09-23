@@ -1,0 +1,13 @@
+[Unit]
+Description=flannel system service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=notify
+ExecStart=/opt/flannel/flannel
+RestartSec=5
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

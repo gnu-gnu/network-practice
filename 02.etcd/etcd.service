@@ -1,0 +1,13 @@
+[Unit]
+Description=etcd system service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=notify
+ExecStart=/opt/etcd/etcd
+RestartSec=5
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
