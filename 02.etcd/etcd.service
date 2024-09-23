@@ -5,7 +5,7 @@ Wants=network-online.target
 
 [Service]
 Type=notify
-ExecStart=/opt/etcd/etcd
+ExecStart=/opt/etcd/etcd --advertise-client-urls=http://192.168.59.101:2379 --listen-client-urls http://0.0.0.0:2379
 RestartSec=5
 Restart=always
 
